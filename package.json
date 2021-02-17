@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "parcel serve src/index.html",
+    "start": "parcel serve src/index.html",
     "build": "rm -rf build && parcel build src/index.html -d build --public-url /grid-chess/",
+    "min": "npx postcss src/css/index.css -u postcss-clean -o src/css/index.min.css --no-map",
     "deploy": "gh-pages -d build"
   },
   "repository": {
