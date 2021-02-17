@@ -1,0 +1,31 @@
+:root {
+  background-color: black;
+}
+
+.tablero {
+  display: grid;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+
+  /* grid-template-areas: "hijo-1 hijo-2 hijo-3 hijo-4 hijo-5 hijo-6 hijo-7 hijo-8"; */
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border: 10px solid cyan;
+}
+
+.box {
+  background: linear-gradient(to right, #e8cbc0, #636fa4);
+  border: 1px solid white;
+}
+
+.box:nth-child(-2n+7),
+.box:nth-child(9) ~ div:nth-child(-2n+16),
+.box:nth-child(16) ~ div:nth-child(-2n+23),
+.box:nth-child(25) ~ div:nth-child(-2n+32),
+.box:nth-child(32) ~ div:nth-child(-2n+39),
+.box:nth-child(41) ~ div:nth-child(-2n+48),
+.box:nth-child(48) ~ div:nth-child(-2n+55),
+.box:nth-child(56) ~ div:nth-child(-2n+64) {
+  background: linear-gradient(to right, #43c6ac, #f8ffae);
+}
